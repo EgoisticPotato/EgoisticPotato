@@ -1,4 +1,3 @@
-# 💫 About Me:
 🌿 About Me<br><br>🛠️ Working on:<br>AI agents, RAG pipelines, and a GCP-native onboarding chatbot.<br><br>🤝 Collaborating on:<br>LLM apps, FastAPI tools, and agentic automation projects.<br><br>🧠 Learning:<br>MCP, multi-agent orchestration, and embedded concurrency (FreeRTOS).<br><br>❓ Ask me about:<br>RAG, vector search, FastAPI, GCP architectures, and DSA patterns.<br><br>⚡ Fun fact:<br>I build everything—from tiny Arduino systems to full cloud AI pipelines.
 
 
