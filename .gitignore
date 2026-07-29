@@ -1,0 +1,40 @@
+﻿# Generated files
+output/
+README.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.env
+venv/
+env/
+.venv310/
+
+# Local fonts (TTF is not committed)
+assets/fonts/
+assets/photos/
+assets/templates/
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Node (if using npm)
+node_modules/
+package-lock.json
+
+Guides/

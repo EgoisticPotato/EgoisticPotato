@@ -1,0 +1,78 @@
+name: Update GitHub Stats Graphics
+
+# Run on every push to any branch *and* on a daily schedule (UTC)
+on:
+  push:
+    branches: [ main ]          # adjust if you use a different default branch
+  schedule:
+    - cron: '0 0 * * *'        # every day at 00:00 UTC (feel free to change)
+
+jobs:
+  build:
+    runs-on: windows-latest     # matches your local Windows dev environment
+    defaults:
+      run:
+        shell: pwsh            # PowerShell (the same you use locally)
+
+    steps:
+      # ------------------------------------------------------------------
+      # 1️⃣ Checkout the repo
+      # ------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # fetch full history so the script can read git config if needed
+          fetch-depth: 0
+
+      # ------------------------------------------------------------------
+      # 2️⃣ Set up Python 3.10 (the version you used locally)
+      # ------------------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # ------------------------------------------------------------------
+      # 3️⃣ Install dependencies (requirements.txt + python‑dotenv)
+      # ------------------------------------------------------------------
+      - name: Install Python deps
+        run: |
+          python -m venv .venv
+          .\.venv\Scripts\Activate.ps1
+          pip install -r requirements.txt
+          pip install python-dotenv
+
+      # ------------------------------------------------------------------
+      # 4️⃣ Provide the GitHub token to the script via .env
+      # ------------------------------------------------------------------
+      - name: Write .env for the workflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # automatically scoped token
+          GITHUB_USER: ${{ github.repository_owner }} # optional: set your username
+        run: |
+          @"
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER=${{ github.repository_owner }}
+          "@ | Out-File -FilePath .env -Encoding utf8
+
+      # ------------------------------------------------------------------
+      # 5️⃣ Run the stats‑graphics generator
+      # ------------------------------------------------------------------
+      - name: Generate SVGs
+        run: |
+          .\.venv\Scripts\Activate.ps1
+          python scripts/stats_graphics.py
+
+      # ------------------------------------------------------------------
+      # 6️⃣ Commit and push any changes (only if something changed)
+      # ------------------------------------------------------------------
+      - name: Commit updated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Add the new/changed files
+          git add assets/*.svg
+          # If there is nothing new, exit silently
+          git diff --cached --quiet && exit 0
+          git commit -m "🤖 Refresh GitHub stats graphics"
+          git push

@@ -1,0 +1,18 @@
+# Image Processing
+Pillow
+
+# Numeric Computing
+numpy
+# Image preprocessing (optional, for advanced filtering)
+opencv-python-headless
+
+# Background removal (optional, adds ~176MB, slower)
+# Uncomment if you want automatic background removal:
+rembg
+
+# Font subsetting
+fonttools
+brotli
+
+# HTTP requests (if not using stdlib urllib)
+requests

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200px" height="80px" viewBox="0 0 200 80">
+  <style>text { font-family: 'Inter', sans-serif; fill: #7D0080; }</style>
+  <text x="100" y="30" font-size="18" text-anchor="middle">Current: 0d</text>
+  <text x="100" y="60" font-size="18" text-anchor="middle">Longest: 3d</text>
+</svg>

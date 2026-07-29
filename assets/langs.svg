@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="145px" viewBox="0 0 300 145">
+
+  <style>text { font-family: 'Inter', sans-serif; fill: #7D0080; font-size: 12px; }</style>
+  <rect x="0" y="20" width="101" height="20" fill="#D77FD8"/>
+  <text x="106" y="34.0">TypeScript (632 KB)</text>
+  <rect x="0" y="45" width="77" height="20" fill="#D77FD8"/>
+  <text x="82" y="59.0">Python (484 KB)</text>
+  <rect x="0" y="70" width="64" height="20" fill="#D77FD8"/>
+  <text x="69" y="84.0">JavaScript (401 KB)</text>
+  <rect x="0" y="95" width="39" height="20" fill="#D77FD8"/>
+  <text x="44" y="109.0">Jupyter Notebook (247 KB)</text>
+  <rect x="0" y="120" width="16" height="20" fill="#D77FD8"/>
+  <text x="21" y="134.0">CSS (100 KB)</text>
+</svg>
