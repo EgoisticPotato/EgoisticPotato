@@ -73,6 +73,10 @@ jobs:
           # Add the new/changed files
           git add assets/*.svg
           # If there is nothing new, exit silently
-          git diff --cached --quiet && exit 0
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+              Write-Host "No changes to commit"
+              exit 0
+          }
           git commit -m "🤖 Refresh GitHub stats graphics"
           git push
