@@ -25,6 +25,15 @@
 
 <h3><code>egoisticpotato@github ~ $ ./contributions.sh</code></h3>
 
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/heatmap?username=egoisticpotato&theme=github-dark&style=terminal&mode=light" />
+  <img src="https://www.gitskins.com/api/section/heatmap?username=egoisticpotato&theme=github-dark&style=terminal&mode=dark" width="100%" alt="egoisticpotato heatmap" />
+</picture>
+
+</div>
+
+<p align="center"><sub>Mehul Dinesh · Profile generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
+
 ## 🌿 About Me
 AI agents, RAG pipelines, and a GCP‑native onboarding chatbot.
 
@@ -59,12 +68,3 @@ I build everything—from tiny Arduino systems to full cloud AI pipelines.
 ---
 
 *Generated on **2026‑07‑29** with a custom “Hollow‑Purple” theme.*
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/heatmap?username=egoisticpotato&theme=github-dark&style=terminal&mode=light" />
-  <img src="https://www.gitskins.com/api/section/heatmap?username=egoisticpotato&theme=github-dark&style=terminal&mode=dark" width="100%" alt="egoisticpotato heatmap" />
-</picture>
-
-</div>
-
-<p align="center"><sub>Mehul Dinesh · Profile generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
